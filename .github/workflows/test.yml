@@ -5,7 +5,7 @@ on:
       - 'main'
 
 env:
-  WELCOME_PHRASE: Hello
+  WELCOME_PHRASE: Helloo
 
 jobs:
   code_quality:
