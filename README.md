@@ -5,7 +5,7 @@
 To install and use Webb22-alm-cicd, follow these steps:
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/webb22-alm-cicd.git
+git clone https://github.com/harenio/webb22-alm-cicd
 
 # Navigate into the repository
 cd webb22-alm-cicd
