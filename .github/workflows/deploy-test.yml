@@ -1,0 +1,11 @@
+name: Test Deploy
+on:
+    push:
+        branches-ignore:
+            - main
+jobs:
+    deplay-test-server:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print branch name
+              run: "echo Now deploying branch: $GITHUB_REF_NAME to the test server"
