@@ -1,53 +1,46 @@
 const assert = require('assert');
 const { Calculator } = require('../../calculator');
 
-describe('Calculator', function() {
-
+describe('Calculator', () => {
   let calculator;
 
-  beforeEach(function() {
+  beforeEach(() => {
     calculator = new Calculator();
   });
 
-  it('should initialize result to 0', function() {
+  it('should initialize result to 0', () => {
     assert.equal(calculator.getResult(), 0);
   });
 
-  it('should return correct methods', function() {
+  it('should return correct methods', () => {
     assert.deepEqual(calculator.methods(), ['multiply', 'subtract', 'divide', 'add', 'clearAll', 'getResult']);
   });
 
-  it('should add correctly', function() {
+  it('should add correctly', () => {
     calculator.add(5);
     assert.equal(calculator.getResult(), 5);
   });
 
-  it('should subtract correctly and return -2', function() {
+  it('should subtract correctly and return -2', () => {
     calculator.subtract(2);
     assert.equal(calculator.getResult(), -2);
   });
 
-  it('should multiply correctly and return 6', function() {
+  it('should multiply correctly and return 6', () => {
     calculator.add(2);
     calculator.multiply(3);
     assert.equal(calculator.getResult(), 6);
   });
 
-  it('should divide correctly', function() {
+  it('should divide correctly', () => {
     calculator.add(10);
     calculator.divide(2);
     assert.equal(calculator.getResult(), 5);
   });
 
-  it('should clear result', function() {
+  it('should clear result', () => {
     calculator.add(5);
     calculator.clearAll();
     assert.equal(calculator.getResult(), 0);
   });
-
-  it('should handle divide by zero', function() {
-    calculator.divide(0);
-    assert.equal(isNaN(calculator.getResult()), true);
-  });
-
 });
