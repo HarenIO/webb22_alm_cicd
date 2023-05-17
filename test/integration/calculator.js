@@ -13,9 +13,9 @@ describe('GET /add', () => {
 
   it('adds multiple numbers', () => {
     supertest(app)
-      .get('/calc/add?val=1&val=2&val=3')
+      .get('/calc/add?val=1&val=2&val=2')
       .end((err, res) => {
-        assert.strictEqual(res.text, '6');
+        assert.strictEqual(res.text, '5');
       });
   });
 });
