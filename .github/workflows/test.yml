@@ -28,3 +28,5 @@ jobs:
         run: npm test
       - name: integration test
         run: npm run test:integration
+      - name: Test Reporter
+        uses: dorny/test-reporter@v1.6.0
