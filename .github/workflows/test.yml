@@ -1,0 +1,25 @@
+name: code_quality
+on:
+  push:
+    branches:
+      - 'main'
+
+env:
+  WELCOME_PHRASE: Hello
+
+jobs:
+  code_quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: 'Say Hello'
+        run: echo "$WELCOME_PHRASE"
+      - name: npm install
+        run: npm install
+      - name: npm lint
+        run: npm run lint
+      - name: unit test
+        run: npm test

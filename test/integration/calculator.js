@@ -1,6 +1,6 @@
 const supertest = require('supertest');
 const assert = require('assert');
-const app = require('../app');
+const app = require('../../app');
 
 describe('GET /add', () => {
   it('adds two numbers', () => {
