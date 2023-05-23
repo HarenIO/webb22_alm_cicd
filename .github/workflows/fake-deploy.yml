@@ -1,0 +1,36 @@
+name: fake_deploy
+
+on:
+  push:
+
+jobs:
+  deploy_to_test:
+    runs-on: ubuntu-latest
+
+    if: ${{ github.ref != 'refs/heads/main' }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Installs packages
+        run: 'npm i'
+
+      - name: Print branch name
+        run: 'echo Now deploying branch: $GITHUB_REF_NAME to the test server'
+
+  deploy_to_prod:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+
+      - name: Installs packages
+        run: 'npm i'
+
+      - name: Print Branch name
+        run: 'echo Now deploying branch: $GITHUB_REF_NAME to production server'
