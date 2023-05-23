@@ -1,19 +1,39 @@
 # Webb22 CICD Final Project
 
-## Installing Webb22-alm-cicd
+## Project Description
 
-To install and use Webb22-alm-cicd, follow these steps:
+This project is a web application developed using Express.js for handling HTTP requests and responses. It implements various features such as routing, and unit testing. The project follows a CI/CD approach with automated testing and code quality checks.
+
+## Installation
+
+To set up the project on your local machine, follow these steps:
+
 ```bash
 # Clone the repository
-git clone https://github.com/harenio/webb22-alm-cicd
+git clone https://github.com/HarenIO/webb22_alm_cicd
 
-# Navigate into the repository
+# Navigate to the projet directory
 cd webb22-alm-cicd
 
-# Install dependencies
+# Install the dependencies
 npm install
+```
 
-# Run the server
+## Running the Application
+```bash
+# In the project directory, run:
 npm start
+```
 
+This will launch the server, and you can access the application in your browser at http://localhost:3000/, where 3000 is the specified port number.
+
+## Running Tests
+
+The project includes unit tests and integration tests. To run the tests, use the following commands:
+```bash
+# Run unit tests
+npm test
+
+# Run integration tests
+npm run test:integration
 ```
