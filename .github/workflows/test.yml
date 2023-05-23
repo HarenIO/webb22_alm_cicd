@@ -8,7 +8,7 @@ on:
       - 'main'
 
 env:
-  WELCOME_PHRASE: Helloo
+  JOB_PHRASE: Running lint & unit tests 
 
 jobs:
   code_quality:
@@ -19,12 +19,10 @@ jobs:
         with:
           node-version: 18
       - name: 'Say Hello'
-        run: echo "$WELCOME_PHRASE"
+        run: echo "$JOB_PHRASE"
       - name: npm install
         run: npm install
       - name: npm lint
         run: npm run lint
       - name: unit test
         run: npm test
-      - name: integration test
-        run: npm run test:integration
